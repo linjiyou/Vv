@@ -1,28 +1,55 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <div v-if="false">
+      <!-- // medium / small / mini -->
+      <v-button>按钮</v-button>
+      <v-button icon="settings">按钮</v-button>
+      <v-button :loading="true">按钮</v-button>
+      <v-button disabled>按钮</v-button>
+    </div>
+    <div style="margin-top:50px" v-if="false">
+      <v-button size="medium" iconPosition="right" icon="settings"
+        >按钮</v-button
+      >
+      <v-button size="small" iconPosition="right" icon="settings"
+        >按钮</v-button
+      >
+      <v-button size="mini" iconPosition="right" icon="settings">按钮</v-button>
+    </div>
+    <div class="my-input">
+      <s-input value="linjiyou"></s-input>
+
+      <s-input value="linjiyou" disabled></s-input>
+
+      <s-input value="linjiyou" readonly></s-input>
+
+    </div>
+    <div class="my-input">
+        <s-input error="姓名不能少于两个字"></s-input>
+    </div>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
+import Button from "./components/button/button";
+import Input from "./components/input/input";
 export default {
-  name: 'App',
+  name: "App",
   components: {
-    HelloWorld
-  }
-}
+    vButton: Button,
+    sInput: Input,
+  },
+};
 </script>
 
 <style lang="less">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+* {
+  margin: 0;
+  padding: 0;
+}
+.my-input{
+  display: flex;
+  margin-top: 20px;
+
 }
 </style>
