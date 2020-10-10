@@ -7,6 +7,10 @@
       :disabled="disabled"
       :readonly="readonly"
       :class="{ error: error }"
+      @change="$emit('change',$event)"
+      @focus="$emit('focus',$event)"
+      @input="$emit('input',$event.target.value)"
+      @blur="$emit('input',$event.target.value)"
     />
     <div v-if="error" class="tips">
       <icon name="error" class="icon-error"></icon>
