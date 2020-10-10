@@ -1,5 +1,5 @@
 <template>
-  <div class="col" :style="{paddingLeft:gutter/2+'px',paddingRight:gutter/2+'px'}">
+  <div class="col" :style="colStyle">
     <div class="col-content">
       <slot></slot>
     </div>
@@ -17,7 +17,16 @@ export default {
   },
   data(){
       return{
-          gutter:0
+          gutter:0,
+          
+      }
+  },
+  computed:{
+      colStyle(){
+          return{
+            paddingLeft:this.gutter/2+'px',
+            paddingRight:this.gutter/2+'px'
+          }
       }
   }
 };
