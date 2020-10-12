@@ -9,12 +9,15 @@ export default {
   name: "s-row",
   props: {
     gutter: {
-      type: [Number, String],
+      type: [Number, String,Array],
     },
   },
   computed: {
     rowStyle() {
       let { gutter } = this;
+      if( typeof gutter== 'object'){
+       gutter= gutter[0]
+      }
       return {
         marginLeft: -gutter / 2 + "px",
         marginRight: -gutter / 2 + "px",
@@ -34,6 +37,7 @@ export default {
 <style lang="less" scoped>
 .row {
   display: flex;
+  flex-wrap: wrap;
   height: 100%;
 }
 </style>

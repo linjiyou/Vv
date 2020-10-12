@@ -29,7 +29,7 @@
     <!-- 程序员的工作50%以上不是写代码 -->
     <!-- git branch        git push origin '本地分支':远程分支 -->
     <div class="grid">
-      <s-row>
+      <!-- <s-row>
         <s-col></s-col>
         <s-col></s-col>
       </s-row>
@@ -49,11 +49,11 @@
         <s-col data-span="6"></s-col>
         <s-col data-span="6"></s-col>
       </s-row>
-       <s-row>
+      <s-row>
         <s-col data-span="5"></s-col>
         <s-col data-span="5" offset="14"></s-col>
       </s-row>
-       <s-row>
+      <s-row>
         <s-col data-span="5"></s-col>
         <s-col data-span="5" offset="5"></s-col>
         <s-col data-span="5" offset="4"></s-col>
@@ -64,11 +64,28 @@
         <s-col></s-col>
         <s-col></s-col>
       </s-row>
-       <s-row gutter="100">
+      <s-row gutter="100">
         <s-col></s-col>
         <s-col></s-col>
         <s-col></s-col>
         <s-col></s-col>
+      </s-row> -->
+      <s-row :gutter="12" >
+        <s-col data-span="24" ipad-span="12" narrow-pc-span="8">
+          <div style="height:100px; background:#bbb;border:1px solid #aaa" ></div>
+        </s-col>
+          <s-col data-span="24" ipad-span="12" narrow-pc-span="8">
+          <div style="height:100px; background:#bbb;border:1px solid #aaa" ></div>
+        </s-col>
+         <s-col data-span="24" ipad-span="12" narrow-pc-span="8">
+          <div style="height:100px; background:#bbb;border:1px solid #aaa" ></div>
+        </s-col>
+         <s-col data-span="24" ipad-span="12" narrow-pc-span="8">
+          <div style="height:100px; background:#bbb;border:1px solid #aaa" ></div>
+        </s-col>
+         <s-col data-span="24" ipad-span="12" narrow-pc-span="8">
+          <div style="height:100px; background:#bbb;border:1px solid #aaa" ></div>
+        </s-col>
       </s-row>
     </div>
   </div>
