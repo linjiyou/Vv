@@ -17,19 +17,17 @@ export default {
   computed: {
     colStyle() {
       let { gutter } = this;
-      if (typeof gutter == "object") {
-        return {
-          paddingLeft: this.gutter[0] / 2 + "px",
-          paddingRight: this.gutter[0] / 2 + "px",
-          marginTop: this.gutter[1] / 2 + "px",
-          marginBottom: this.gutter[1] / 2 + "px",
-        };
-      } else {
-        return {
-          paddingLeft: this.gutter / 2 + "px",
-          paddingRight: this.gutter / 2 + "px",
-        };
-      }
+      return typeof gutter == "object"
+        ? {
+            paddingLeft: this.gutter[0] / 2 + "px",
+            paddingRight: this.gutter[0] / 2 + "px",
+            marginTop: this.gutter[1] / 2 + "px",
+            marginBottom: this.gutter[1] / 2 + "px",
+          }
+        : {
+            paddingLeft: this.gutter / 2 + "px",
+            paddingRight: this.gutter / 2 + "px",
+          };
     },
   },
 };

@@ -70,7 +70,7 @@
         <s-col></s-col>
         <s-col></s-col>
       </s-row> -->
-      <s-row :gutter="12" >
+      <s-row :gutter="[12,12]" >
         <s-col data-span="24" ipad-span="12" narrow-pc-span="8">
           <div style="height:100px; background:#bbb;border:1px solid #aaa" ></div>
         </s-col>
