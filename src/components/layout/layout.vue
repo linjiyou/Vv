@@ -21,7 +21,6 @@ export default {
   
     this.$children.forEach(vm => {
         if(vm.$options.name==='s-sider'){
-              console.log(vm.$options.name)
               this.layoutCla.hasSider=true
         }
     });

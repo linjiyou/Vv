@@ -44,7 +44,6 @@ export default {
     },
   },
   created() {
-    console.log(this.size);
     switch (this.size) {
       case "medium":
         this.medium = true;
