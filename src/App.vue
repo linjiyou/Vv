@@ -158,7 +158,17 @@ export default {
   },
   methods: {
     me(){
-      this.$toast("hell")
+      this.$toast("<i>hellgggggggggggg</i>",{
+        closeButton:{
+          text:'知道lllllllllllllllllllllllllll',
+          callback(){
+            console.log("ooo");
+          }
+        },
+        // autoClose:true,
+        // autoCloseDelay:1000
+        enableHtml:true
+      })
     }
   },
   data() {
